@@ -15,7 +15,7 @@ async function getResponse(address) {
 }
 
 async function fetchDataForAddresses() {
-  const addresses = fs.readFileSync('EVM.txt', 'utf-8').split('\n');
+  const addresses = fs.readFileSync('wallets.txt', 'utf-8').split('\n');
 
   for (const address of addresses) {
     const data = await getResponse(address);
